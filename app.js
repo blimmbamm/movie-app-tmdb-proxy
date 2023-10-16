@@ -13,7 +13,8 @@ if(process.env.PORT) {
 
 const app = express();
 
-app.use(cors({ origin: process.env.CORS_ORIGIN }));
+// app.use(cors({ origin: process.env.CORS_ORIGIN }));
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
 app.post("/", async (req, res, next) => {
